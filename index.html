@@ -4,20 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Parrainage Boursobank - Offre exclusive</title>
-  <meta name="description" content="Profitez de l'offre de parrainage Boursobank et recevez jusqu'à 130€ offerts à l'ouverture de votre compte." />
+  <meta name="description" content="Profitez de l’offre de parrainage Boursobank et recevez jusqu’à 130€ offerts à l’ouverture de votre compte." />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- Banderole -->
-  <div class="bg-pink-500 text-white py-2 text-center">
-    <p class="text-lg font-semibold">Gagner jusqu'a 130€ avec le programme de parrainage</p>
+  <!-- Banderole flottante -->
+  <div id="floating-banner" class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-pink-500 text-white px-6 py-2 rounded-full shadow-lg flex items-center gap-3">
+    <span class="font-semibold">MISA0045</span>
+    <a href="https://bour.so/p/orx1whSkGml" target="_blank" class="bg-white text-pink-600 px-3 py-1 rounded-full text-sm font-medium hover:opacity-90">🔗 Parrainage</a>
+    <button id="close-banner" class="ml-2 text-white/80 hover:text-white" aria-label="Fermer">✕</button>
   </div>
 
   <!-- Header -->
   <header class="bg-white shadow">
     <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-700">ParrainBoursobank</h1>
+      <h1 class="text-2xl font-bold text-blue-700">Parrainage Boursobank</h1>
       <nav class="space-x-4">
         <a href="#avantages" class="text-gray-700 hover:text-blue-600">Avantages</a>
         <a href="#avis" class="text-gray-700 hover:text-blue-600">Avis</a>
@@ -32,8 +34,8 @@
     <div class="max-w-2xl mx-auto px-4">
       <h2 class="text-4xl font-bold mb-4">Jusqu’à 130€ offerts grâce au parrainage Boursobank</h2>
       <p class="text-lg mb-6">Ouvrez un compte gratuitement et bénéficiez d’une offre exclusive avec mon lien de parrainage.</p>
-      <a href="https://bour.so/tonLienParrainage" target="_blank" class="inline-block bg-blue-600 text-white text-lg px-6 py-3 rounded hover:bg-blue-700 transition">
-        Je profite de l’offre
+      <a href="https://bour.so/p/orx1whSkGml" target="_blank" class="inline-block bg-blue-600 text-white text-lg px-6 py-3 rounded hover:bg-blue-700 transition">
+       👉 Je veut gagner 130€ 👈
       </a>
     </div>
   </section>
@@ -59,6 +61,16 @@
     </div>
   </section>
 
+  <!-- Vidéo -->
+  <section id="video" class="py-16 bg-white text-center">
+    <h3 class="text-3xl font-bold mb-8">🎥 Comment ouvrir un compte Boursobank ?💰</h3>
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe class="w-full h-96 rounded" src="https://www.youtube.com/embed/2dJtS-oQq6c" title="Boursorama Banque : Méga Prime de Parrainage" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
   <!-- Témoignages -->
   <section id="avis" class="py-16 bg-gray-50">
     <div class="max-w-5xl mx-auto px-4">
@@ -71,30 +83,24 @@
         <div class="bg-white p-6 rounded shadow">
           <p class="italic">"éro frais à l’étranger, et j’ai touché mes 130€ rapidement."</p>
           <p class="mt-2 font-semibold text-right">– Sarah B.</p>
+        </div>
         <div class="bg-white p-6 rounded shadow">
           <p class="italic">"Très satisfait, j’ai eu 130€ ."</p>
           <p class="mt-2 font-semibold text-right">– jonh A.</p>
+        </div>
         <div class="bg-white p-6 rounded shadow">
           <p class="italic">"130€ rapidement merci beaucoup."</p>
           <p class="mt-2 font-semibold text-right">– Zack L.</p>
+        </div>
         <div class="bg-white p-6 rounded shadow">
           <p class="italic">"merci beaucoup c'est la meilleurs banque !!!!!"</p>
           <p class="mt-2 font-semibold text-right">– lauren M.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Vidéo -->
-  <section id="video" class="py-16 bg-white text-center">
-    <h3 class="text-3xl font-bold mb-8">🎥 Comment ouvrir un compte Boursobank ?</h3>
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="aspect-w-16 aspect-h-9">
-        <iframe class="w-full h-96 rounded" src="https://www.youtube.com/embed/VIDEO_ID" title="Tutoriel Boursobank" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
-
+  
   <!-- Liens utiles -->
   <section id="liens" class="py-16 bg-gray-50">
     <div class="max-w-5xl mx-auto px-4">
@@ -112,8 +118,19 @@
     &copy; 2025 ParrainBoursobank. Tous droits réservés. | <a href="#" class="text-blue-500 hover:underline">Mentions légales</a>
   </footer>
 
+  <!-- Script pour fermer la banderole -->
+  <script>
+    (function() {
+      const banner = document.getElementById('floating-banner');
+      const closeBtn = document.getElementById('close-banner');
+      if (!banner || !closeBtn) return;
+      closeBtn.addEventListener('click', () => banner.style.display = 'none');
+    })();
+  </script>
+
 </body>
 </html>
+
 
 
 
